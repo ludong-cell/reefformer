@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reefformer"
+version = "1.0.0"
+description = "Lead-dependent context and persistence fusion for multi-horizon SST forecasts"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "ReefFormer contributors"}]
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.0,<3",
+  "torch>=2.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/ludong-cell/reefformer"
+Repository = "https://github.com/ludong-cell/reefformer"
+Issues = "https://github.com/ludong-cell/reefformer/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

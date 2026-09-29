@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software or the processed research data, please cite the associated article and this repository release."
+title: "ReefFormer: lead-dependent forecast fusion for sea surface temperature prediction"
+type: software
+version: 1.0.0
+date-released: 2026-09-28
+authors:
+  - name: "ReefFormer contributors"
+license: MIT
+repository-code: "https://github.com/ludong-cell/reefformer"
+keywords:
+  - sea surface temperature
+  - forecast combination
+  - multi-horizon forecasting
+  - geoscientific machine learning

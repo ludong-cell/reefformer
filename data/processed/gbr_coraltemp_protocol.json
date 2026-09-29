@@ -1,0 +1,791 @@
+{
+  "dataset_id": "GBR_GENERALIZATION_V1",
+  "created_utc": "2026-09-24T14:08:12.185081+00:00",
+  "spec_sha256": "5272a515862449165f3e42b83f58e539b2cf4182ce2d8577be20866a6cd4cc9f",
+  "dataset_sha256": "d67c0ed5776c0c0cdc1a5aff25d538f23e190e896f448da4fb3150fec95e60a8",
+  "pixel_file_sha256": "e8d7f1352c7df18b22bc3df50c4b9a2531f383db446e2c1e1f7eb0e919e2bf3d",
+  "anchors": 33,
+  "pixels": 292,
+  "pixel_selection": "valid CoralTemp ocean cells within 10 km of preregistered anchors; deduplicated",
+  "ocean_mask_date": "2000-01-01",
+  "source": "NOAA Coral Reef Watch CoralTemp v3.1 daily 5-km SST",
+  "coverage": [
+    "2000-01-01",
+    "2026-09-07"
+  ],
+  "lookbacks": [
+    90,
+    365
+  ],
+  "horizon": 30,
+  "splits": {
+    "Train": [
+      "2000-01-01",
+      "2017-12-31"
+    ],
+    "Val": [
+      "2018-01-01",
+      "2021-12-31"
+    ],
+    "Dev": [
+      "2022-01-01",
+      "2025-12-31"
+    ]
+  },
+  "origin_counts": {
+    "Train": 6181,
+    "Val": 1432,
+    "Dev": 1432,
+    "Test2026": 221
+  },
+  "climatology": "365-bin per-pixel Train-only mean with circular 31-day smoothing",
+  "scaling": "single GBR-domain Train-only RMS scalar",
+  "dap": "per-pixel Train-only lag-1 least-squares coefficient clipped to [0,1]",
+  "fusion": "q(h) and w(h) fitted on GBR Validation only",
+  "model_selection": "none: iT90 and iT365 are preregistered components",
+  "dev_used_for_selection": false,
+  "raw_time_audit": {
+    "missing_days_repaired": [
+      "2022-12-31",
+      "2023-12-31",
+      "2024-12-31",
+      "2025-12-30",
+      "2025-12-31"
+    ],
+    "repair_records": [
+      {
+        "date": "2022-12-31",
+        "provider": "cached official NOAA repair",
+        "sha256": "bf4af0c31d1dabbb3a583ff95a60c7cbfca635ff76f7804c7bf7bc117431aa6b",
+        "bytes": 11639645,
+        "attempt": 1
+      },
+      {
+        "date": "2023-12-31",
+        "provider": "cached official NOAA repair",
+        "sha256": "be2e929926a9f14746c8d3f83c4a696edf761a47063d00c3d4695365d833d86f",
+        "bytes": 11640602,
+        "attempt": 1
+      },
+      {
+        "date": "2024-12-31",
+        "provider": "cached official NOAA repair",
+        "sha256": "6061d991ed89db18e5c54c59e5130abaa59cbfc9dc82075359fc512f392bcd3f",
+        "bytes": 11681087,
+        "attempt": 1
+      },
+      {
+        "date": "2025-12-30",
+        "provider": "cached official NOAA repair",
+        "sha256": "14715ed57b8030d8dac5442f647258d0ab91fa55343d43fe978db47dfd7e2ca8",
+        "bytes": 11722828,
+        "attempt": 1
+      },
+      {
+        "date": "2025-12-31",
+        "provider": "cached official NOAA repair",
+        "sha256": "10af4ca1479b0edbd2556a6296b676f33c3f01e691c2d254d7db40d284ee3c87",
+        "bytes": 11826658,
+        "attempt": 1
+      }
+    ],
+    "duplicate_dates_deduplicated": 4,
+    "duplicate_max_abs_difference_c": 0.0,
+    "final_daily_axis_unique_and_continuous": true,
+    "imputation_used": false
+  },
+  "raw_blocks": [
+    {
+      "year": 2000,
+      "start": "2000-01-01",
+      "end": "2000-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2000-01-01T12:00:00Z):1:(2000-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16280112,
+      "sha256": "d4dc2e94414b26a478a55bd5f7b28c2d7fe347991be403d70eb068645e238146",
+      "attempt": 1,
+      "validation": {
+        "times": 366,
+        "expected_times": 366,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2001,
+      "start": "2001-01-01",
+      "end": "2001-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2001-01-01T12:00:00Z):1:(2001-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "54d3594cf8d804205e3b5682e3e3cd5cc465a252c37dec34f0d0a70ca14b3892",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2002,
+      "start": "2002-01-01",
+      "end": "2002-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2002-01-01T12:00:00Z):1:(2002-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "e9408831942b8ea2c2f326e492105a7b9631afd610bd46a8011078a2da8c7162",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2003,
+      "start": "2003-01-01",
+      "end": "2003-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2003-01-01T12:00:00Z):1:(2003-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "1973cce76bc71e9bf74241eb8791bafd209b414d9b7a11035dcd4fad3ccb3d8a",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2004,
+      "start": "2004-01-01",
+      "end": "2004-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2004-01-01T12:00:00Z):1:(2004-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16280112,
+      "sha256": "7b8c7cd764d89f2d7a8d27f6bedf9f228d36f4c2b4485ecfa168d110df52cbfa",
+      "attempt": 1,
+      "validation": {
+        "times": 366,
+        "expected_times": 366,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2005,
+      "start": "2005-01-01",
+      "end": "2005-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2005-01-01T12:00:00Z):1:(2005-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "11ba897e16095942b22df7c76cc5ec70ecd119d551552ec21cc9ccc42d241bf4",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2006,
+      "start": "2006-01-01",
+      "end": "2006-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2006-01-01T12:00:00Z):1:(2006-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "4c3d2ca8fb99649414ba7c3744979dcc9b0031089154e64455209cf4a71f6414",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2007,
+      "start": "2007-01-01",
+      "end": "2007-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2007-01-01T12:00:00Z):1:(2007-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "f9f70aad58cd31be77e2967a4e2b5f4c0396cfd5a42f827bed177597013d71f7",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2008,
+      "start": "2008-01-01",
+      "end": "2008-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2008-01-01T12:00:00Z):1:(2008-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16280112,
+      "sha256": "bed8f4d02443118f484cbda7d7671ba9933b248ab940c6d7a15ff17074470291",
+      "attempt": 1,
+      "validation": {
+        "times": 366,
+        "expected_times": 366,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2009,
+      "start": "2009-01-01",
+      "end": "2009-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2009-01-01T12:00:00Z):1:(2009-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "bb04a7693c9be951a8aad87120c8e88a7bb7c7480775dc64e7404f4f9a51fca4",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2010,
+      "start": "2010-01-01",
+      "end": "2010-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2010-01-01T12:00:00Z):1:(2010-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "1bfaf74669315a91158ccad8c9479455db5e420814a315185e4036e90c42d140",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2011,
+      "start": "2011-01-01",
+      "end": "2011-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2011-01-01T12:00:00Z):1:(2011-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "ce161599370947eeaa001d34b7c70340a4c6e90e432ae3c189f422324a105afc",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2012,
+      "start": "2012-01-01",
+      "end": "2012-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2012-01-01T12:00:00Z):1:(2012-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16280112,
+      "sha256": "f5c87670c411ba4fb5126545623e24bf6a7f7daa9ea514db8a8a2422950342c5",
+      "attempt": 1,
+      "validation": {
+        "times": 366,
+        "expected_times": 366,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2013,
+      "start": "2013-01-01",
+      "end": "2013-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2013-01-01T12:00:00Z):1:(2013-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "1c56aaf72e035e7146b5bffdf4d06c3c25b81ad8fb3adc857668d10f54b244df",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2014,
+      "start": "2014-01-01",
+      "end": "2014-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2014-01-01T12:00:00Z):1:(2014-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "9ac751e0f7d80b517ca2ead35bf6adf27749ffd136c2f174452e70c75b25321e",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2015,
+      "start": "2015-01-01",
+      "end": "2015-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2015-01-01T12:00:00Z):1:(2015-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "5a2c007dac992257f684a5cdc765e18d751982d09beb3590af1b33860801eece",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2016,
+      "start": "2016-01-01",
+      "end": "2016-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2016-01-01T12:00:00Z):1:(2016-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16280112,
+      "sha256": "3a3e001ac240fed8ff2e903a366165fe772fba0315727ac165e1f70071a90a00",
+      "attempt": 1,
+      "validation": {
+        "times": 366,
+        "expected_times": 366,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2017,
+      "start": "2017-01-01",
+      "end": "2017-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2017-01-01T12:00:00Z):1:(2017-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "25a77edd3613cdbfeaf7774ca94e74e4dc7dc1b8bbe8d67a777894ac85c783db",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2018,
+      "start": "2018-01-01",
+      "end": "2018-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2018-01-01T12:00:00Z):1:(2018-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "63e7f1db5322f0bd102afeeda36168386e8f1b5edf5ddce95adda054e23bfb4f",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2019,
+      "start": "2019-01-01",
+      "end": "2019-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2019-01-01T12:00:00Z):1:(2019-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "3761fe41508548cb7edb436c530c9c6c9acb8048e01648f2943c74d37564285f",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2020,
+      "start": "2020-01-01",
+      "end": "2020-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2020-01-01T12:00:00Z):1:(2020-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16280112,
+      "sha256": "2a9fe6733fde25039efef5001d0a8d45b34c465d900318108f59768facf211b4",
+      "attempt": 1,
+      "validation": {
+        "times": 366,
+        "expected_times": 366,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2021,
+      "start": "2021-01-01",
+      "end": "2021-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2021-01-01T12:00:00Z):1:(2021-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "50dcf19b00d39c3bed3c4a31e57f83f6607177c1addc9ee833362430b47a25ab",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2022,
+      "start": "2022-01-01",
+      "end": "2022-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2022-01-01T12:00:00Z):1:(2022-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "4377245145ea5094a007a21c6c43b409569ef499a8d93adee4060a0320e13d02",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [
+          "2022-12-31T12:00:00"
+        ],
+        "out_of_range_times": [
+          "2023-01-01T12:00:00"
+        ],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2023,
+      "start": "2023-01-01",
+      "end": "2023-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2023-01-01T12:00:00Z):1:(2023-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16235664,
+      "sha256": "9277d789fe2b48fdd63e6782915c7b7f40053e677e3c24f00d915b10172a4a60",
+      "attempt": 1,
+      "validation": {
+        "times": 365,
+        "expected_times": 365,
+        "missing_times": [
+          "2023-12-31T12:00:00"
+        ],
+        "out_of_range_times": [
+          "2024-01-01T12:00:00"
+        ],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2024,
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2024-01-01T12:00:00Z):1:(2024-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16280112,
+      "sha256": "e82147ad37264336de01bf0783c92a3d26e5ec9c0aa7fb08831ddf6ab1f9a85e",
+      "attempt": 1,
+      "validation": {
+        "times": 366,
+        "expected_times": 366,
+        "missing_times": [
+          "2024-12-31T12:00:00"
+        ],
+        "out_of_range_times": [
+          "2025-01-01T12:00:00"
+        ],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2025,
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2025-01-01T12:00:00Z):1:(2025-12-31T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 16191216,
+      "sha256": "89c2741f0f1ee616317d582eff6769bba33c0294e1ccc73e0a947f1190b23abe",
+      "attempt": 1,
+      "validation": {
+        "times": 364,
+        "expected_times": 365,
+        "missing_times": [
+          "2025-12-30T12:00:00",
+          "2025-12-31T12:00:00"
+        ],
+        "out_of_range_times": [
+          "2026-01-01T12:00:00"
+        ],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    },
+    {
+      "year": 2026,
+      "start": "2026-01-01",
+      "end": "2026-09-07",
+      "provider": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc",
+      "request": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1.nc?analysed_sst[(2026-01-01T12:00:00Z):1:(2026-09-07T12:00:00Z)][(-19.5):1:(-14.5)][(145.4):1:(148.05)]",
+      "bytes": 11124144,
+      "sha256": "28532f70be141fce46beb76453cd2a9fbede33375491221dd549069f749ac0cf",
+      "attempt": 1,
+      "validation": {
+        "times": 250,
+        "expected_times": 250,
+        "missing_times": [],
+        "out_of_range_times": [],
+        "lat": [
+          -19.475000381469727,
+          -14.475000381469727
+        ],
+        "lon": [
+          145.375,
+          148.0749969482422
+        ],
+        "finite_fraction": 0.83006300630063
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Setting,Reference,Delta_RMSE,CI_low,CI_high,Resolved,Source
+GBR independent fit,iT365,-0.0175214029022199,-0.0529174113727701,0.0171790015472732,False,GBR three-seed independent-domain replication
+Hainan to GBR frozen,iT365,-0.0245374566284752,-0.0564236050181725,0.0023250409516634,False,Bidirectional frozen-weight transfer
+GBR to Hainan frozen,iT365,-0.0473776794285396,-0.0773373726939341,-0.0153868963625304,True,Bidirectional frozen-weight transfer
+Hainan unseen sectors,iT365,-0.0378006100654602,-0.0569615773856639,-0.0207700170576572,True,Four-fold 25 km buffered leave-one-sector-out
+Hainan OSTIA product,iT365,-0.0331876277923584,-0.0531635992228984,-0.0108299339190125,True,OSTIA second-product replication
+GBR independent fit,DAP,-0.0807527814118581,-0.1111578122110782,-0.0513934661815908,True,GBR three-seed independent-domain replication
+Hainan to GBR frozen,DAP,-0.0931666577074306,-0.1355795855345966,-0.0460344798142904,True,Bidirectional frozen-weight transfer
+GBR to Hainan frozen,DAP,-0.0654316178549641,-0.105976605192206,-0.0302205439144339,True,Bidirectional frozen-weight transfer
+Hainan unseen sectors,DAP,-0.0716952830553054,-0.1219320967793464,-0.0260041113942861,True,Four-fold 25 km buffered leave-one-sector-out
+Hainan OSTIA product,DAP,-0.0318669863045215,-0.0498408898711204,-0.0169719662517309,True,OSTIA second-product replication

@@ -1,0 +1,11 @@
+name: reef-former
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=1.26
+  - pandas>=2.0
+  - pytorch>=2.2
+  - pytest>=8
+  - pip

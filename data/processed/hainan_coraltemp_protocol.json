@@ -1,0 +1,40 @@
+{
+  "dataset_id": "FROZEN_154_SSTA_V1",
+  "dataset_sha256": "1851293fbd1e8a66eaacffd71c9392faaba5422851010513d0f7ade6f5954247",
+  "pixel_file_sha256": "2c899779e59c51dad049c8ca303cea885fc309ccd2bfe63294e8ac51121867a5",
+  "raw_2000_2025_sha256": "4f4764a513d166733ab9b3d440059b24d0a2bd5ed5a2357816ad4652beeca5a1",
+  "raw_2026_sha256": "688c0437d155653af714b273ad029896c29b42d767c394d81de16173116ec25d",
+  "pixels": 154,
+  "lookbacks": [
+    90,
+    180,
+    365
+  ],
+  "horizon": 30,
+  "splits": {
+    "Train": [
+      "2000-01-01",
+      "2017-12-31"
+    ],
+    "Val": [
+      "2018-01-01",
+      "2021-12-31"
+    ],
+    "Dev": [
+      "2022-01-01",
+      "2025-12-31"
+    ]
+  },
+  "origin_counts": {
+    "Train": 6181,
+    "Val": 1432,
+    "Dev": 1432,
+    "Test2026": 221
+  },
+  "climatology": "365-bin per-pixel Train-only mean with circular 31-day smoothing",
+  "scaling": "single Train-only RMS scalar, recomputed for the 154-pixel domain",
+  "dap": "per-pixel lag-1 least-squares coefficient clipped to [0,1], Train only",
+  "selection_rule": "minimum mean Validation RMSE; choose shorter lookback if within 0.5%",
+  "dev_selection_forbidden": true,
+  "manuscript_modified": false
+}

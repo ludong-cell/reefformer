@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+.venv/
+venv/
+build/
+dist/
+outputs/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Never commit credentials or local data-download caches.
+.env
+*.key
+*.pem
+data/raw/
+data/cache/
+
+# Large intermediate predictions are regenerated from checkpoints.
+*.npy
+!tests/fixtures/*.npy
