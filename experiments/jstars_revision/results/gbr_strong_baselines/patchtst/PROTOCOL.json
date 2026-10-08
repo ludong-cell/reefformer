@@ -1,0 +1,30 @@
+{
+  "model": "PatchTST",
+  "official_commit": "204c21efe0b39603ad6e2ca640ef5896646ab1a9",
+  "dataset_sha256": "d67c0ed5776c0c0cdc1a5aff25d538f23e190e896f448da4fb3150fec95e60a8",
+  "pixels": 292,
+  "selected_lookback": 90,
+  "selection_split": "2018-2021 Validation only",
+  "checkpoints": {
+    "42": "a6c6d36d5bf76d2f0fd53c8c6da0c5027a7984ab31d7bb33be933bb840a2b4d0",
+    "43": "61b0df783742128067d5e9e0f6cccb3586f855b674ecbc1ebd139db0f90f0e9b",
+    "44": "377a4c6f173c7d4e4ca0823d295f01b42226cef9485f53c90ef9519aa84a1bd8"
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "lookbacks": [
+    90,
+    180,
+    365
+  ],
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "max_epochs": 40,
+  "patience": 8,
+  "PatchTST_AMP": true,
+  "Dev_and_2026": "forward only after Validation selection and manifest freeze"
+}

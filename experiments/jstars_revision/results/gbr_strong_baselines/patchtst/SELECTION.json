@@ -1,0 +1,12 @@
+{
+  "rule": "lowest mean 2018-2021 Validation RMSE; choose shorter context when within 0.5%",
+  "best_lookback": 90,
+  "minimum_val_rmse": 0.4712182472299771,
+  "within_0.5pct_threshold": 0.47357433846612695,
+  "dev_used": false,
+  "mean_val_rmse_by_lookback": {
+    "90": 0.4712182472299771,
+    "180": 0.4749872400000281,
+    "365": 0.47732131042607034
+  }
+}

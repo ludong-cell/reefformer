@@ -1,0 +1,30 @@
+{
+  "model": "DLinear",
+  "official_commit": "0c113668a3b88c4c4ee586b8c5ec3e539c4de5a6",
+  "dataset_sha256": "d67c0ed5776c0c0cdc1a5aff25d538f23e190e896f448da4fb3150fec95e60a8",
+  "pixels": 292,
+  "selected_lookback": 90,
+  "selection_split": "2018-2021 Validation only",
+  "checkpoints": {
+    "42": "d69bd7ac9a6e62cb2bc8b147f4809ee4e0397578a55487d27091fe545711539a",
+    "43": "16740b8b66d7158eca1b15965b668c30c979653f17124e42aa55075bb967aa40",
+    "44": "9fe07176cbd9c13264e187c26139a855459a304cba287c547091cc499db81093"
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "lookbacks": [
+    90,
+    180,
+    365
+  ],
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "max_epochs": 40,
+  "patience": 8,
+  "PatchTST_AMP": false,
+  "Dev_and_2026": "forward only after Validation selection and manifest freeze"
+}
